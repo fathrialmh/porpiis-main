@@ -5,8 +5,8 @@
             <div class="card-body">
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Total Data Barang</div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $barang; ?></div>
+                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Total Event</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $event; ?></div>
                     </div>
                     <div class="col-auto">
                         <i class="fas fa-folder fa-2x text-gray-300"></i>
@@ -21,8 +21,8 @@
             <div class="card-body">
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Data Supplier</div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $supplier; ?></div>
+                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Total Sekolah</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $user; ?></div>
                     </div>
                     <div class="col-auto">
                         <i class="fas fa-users fa-2x text-gray-300"></i>
@@ -39,8 +39,8 @@
                     <div class="col mr-2">
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
-                                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Total Stok Barang</div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $stok; ?></div>
+                                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Total Registrasi</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $registrasi; ?></div>
                             </div>
                             <div class="col-auto">
                                 <div class="progress progress-sm mr-2">
@@ -80,8 +80,8 @@
     <div class="col-xl-8 col-lg-7">
         <div class="card shadow mb-4">
             <!-- Card Header - Dropdown -->
-            <div class="card-header bg-primary py-3 d-flex flex-row align-items-center justify-content-between">
-                <h6 class="m-0 font-weight-bold text-white">Total Transaksi Barang Perbulan pada Tahun <?= date('Y'); ?></h6>
+            <div class="card-header bg-info py-3 d-flex flex-row align-items-center justify-content-between">
+                <h6 class="m-0 font-weight-bold text-white">Total Registrasi PORPIIS Tahun <?= date('Y'); ?></h6>
             </div>
             <!-- Card Body -->
             <div class="card-body">
@@ -104,8 +104,8 @@
     <div class="col-xl-4 col-lg-5">
         <div class="card shadow mb-4">
             <!-- Card Header - Dropdown -->
-            <div class="card-header bg-primary py-3 d-flex flex-row align-items-center justify-content-between">
-                <h6 class="m-0 font-weight-bold text-white">Transaksi Barang</h6>
+            <div class="card-header bg-info py-3 d-flex flex-row align-items-center justify-content-between">
+                <h6 class="m-0 font-weight-bold text-white">Jumlah Registrasi</h6>
             </div>
             <!-- Card Body -->
             <div class="card-body">
@@ -122,10 +122,10 @@
                 </div>
                 <div class="mt-4 text-center small">
                     <span class="mr-2">
-                        <i class="fas fa-circle text-primary"></i> Barang Masuk
+                        <i class="fas fa-circle text-primary"></i> Event
                     </span>
                     <span class="mr-2">
-                        <i class="fas fa-circle text-danger"></i> Barang Keluar
+                        <i class="fas fa-circle text-danger"></i> Registrasi
                     </span>
                 </div>
             </div>
@@ -133,7 +133,7 @@
     </div>
 </div>
 
-<div class="row">
+<!-- <div class="row">
     <div class="col-md-4">
         <div class="card shadow mb-4">
             <div class="card-header bg-warning py-3">
@@ -227,4 +227,4 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->

@@ -40,56 +40,32 @@ class Admin_model extends CI_Model
         return $this->db->get('user')->result_array();
     }
 
-    public function getBarang()
+    public function getEvent()
     {
-        $this->db->join('jenis j', 'b.jenis_id = j.id_jenis');
-        $this->db->join('satuan s', 'b.satuan_id = s.id_satuan');
-        $this->db->order_by('id_barang');
-        return $this->db->get('barang b')->result_array();
+        $this->db->join('jenis j', 'e.jenis_id = j.id_jenis');
+        $this->db->order_by('id_event');
+        return $this->db->get('event e')->result_array();
     }
 
-    public function getBarangMasuk($limit = null, $id_barang = null, $range = null)
+    public function getRegistrasi()
     {
-        $this->db->select('*');
-        $this->db->join('user u', 'bm.user_id = u.id_user');
-        $this->db->join('supplier sp', 'bm.supplier_id = sp.id_supplier');
-        $this->db->join('barang b', 'bm.barang_id = b.id_barang');
-        $this->db->join('satuan s', 'b.satuan_id = s.id_satuan');
-        if ($limit != null) {
-            $this->db->limit($limit);
-        }
-
-        if ($id_barang != null) {
-            $this->db->where('id_barang', $id_barang);
-        }
-
-        if ($range != null) {
-            $this->db->where('tanggal_masuk' . ' >=', $range['mulai']);
-            $this->db->where('tanggal_masuk' . ' <=', $range['akhir']);
-        }
-
-        $this->db->order_by('id_barang_masuk', 'DESC');
-        return $this->db->get('barang_masuk bm')->result_array();
+        $this->db->join('event e', 'r.event_id = e.id_event');
+        $this->db->order_by('id_registrasi');
+        return $this->db->get('registrasi r')->result_array();
     }
 
-    public function getBarangKeluar($limit = null, $id_barang = null, $range = null)
+    public function chartEventMulai($bulan)
     {
-        $this->db->select('*');
-        $this->db->join('user u', 'bk.user_id = u.id_user');
-        $this->db->join('barang b', 'bk.barang_id = b.id_barang');
-        $this->db->join('satuan s', 'b.satuan_id = s.id_satuan');
-        if ($limit != null) {
-            $this->db->limit($limit);
-        }
-        if ($id_barang != null) {
-            $this->db->where('id_barang', $id_barang);
-        }
-        if ($range != null) {
-            $this->db->where('tanggal_keluar' . ' >=', $range['mulai']);
-            $this->db->where('tanggal_keluar' . ' <=', $range['akhir']);
-        }
-        $this->db->order_by('id_barang_keluar', 'DESC');
-        return $this->db->get('barang_keluar bk')->result_array();
+        $like = '2023-' . $bulan;
+        $this->db->like('tanggal_mulai', $like, 'after');
+        return count($this->db->get('event')->result_array());
+    }
+
+    public function chartEventAkhir($bulan)
+    {
+        $like = '2023-' . $bulan;
+        $this->db->like('tanggal_akhir', $like, 'after');
+        return count($this->db->get('event')->result_array());
     }
 
     public function getMax($table, $field, $kode = null)
@@ -117,33 +93,5 @@ class Admin_model extends CI_Model
         $field = $field . ' <=';
         $this->db->where($field, $min);
         return $this->db->get($table)->result_array();
-    }
-
-    public function chartBarangMasuk($bulan)
-    {
-        $like = 'T-BM-' . date('y') . $bulan;
-        $this->db->like('id_barang_masuk', $like, 'after');
-        return count($this->db->get('barang_masuk')->result_array());
-    }
-
-    public function chartBarangKeluar($bulan)
-    {
-        $like = 'T-BK-' . date('y') . $bulan;
-        $this->db->like('id_barang_keluar', $like, 'after');
-        return count($this->db->get('barang_keluar')->result_array());
-    }
-
-    public function laporan($table, $mulai, $akhir)
-    {
-        $tgl = $table == 'barang_masuk' ? 'tanggal_masuk' : 'tanggal_keluar';
-        $this->db->where($tgl . ' >=', $mulai);
-        $this->db->where($tgl . ' <=', $akhir);
-        return $this->db->get($table)->result_array();
-    }
-
-    public function cekStok($id)
-    {
-        $this->db->join('satuan s', 'b.satuan_id=s.id_satuan');
-        return $this->db->get_where('barang b', ['id_barang' => $id])->row_array();
     }
 }

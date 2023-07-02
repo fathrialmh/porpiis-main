@@ -21,7 +21,7 @@
     <style>
         .bg-login-image {
             /* background-image: url("<?= base_url('assets/img/finance_0bdk.svg'); ?>"); */
-            background-image: url("<?= base_url('assets/img/bpbd.png'); ?>");
+            background-image: url("<?= base_url('assets/img/images/favicon2.png'); ?>");
             background-repeat: no-repeat;
             background-size: 80%;
         }

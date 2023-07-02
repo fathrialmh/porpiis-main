@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title><?= $title; ?> | BPBD Kota Cimahi</title>
+    <title><?= $title; ?> | PORPIIS</title>
 
     <!-- Custom fonts for this template-->
     <link href="<?= base_url(); ?>assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -24,6 +24,8 @@
     <link href="<?= base_url(); ?>assets/vendor/datatables/buttons/css/buttons.bootstrap4.min.css" rel="stylesheet">
     <link href="<?= base_url(); ?>assets/vendor/datatables/responsive/css/responsive.bootstrap4.min.css" rel="stylesheet">
     <link href="<?= base_url(); ?>assets/vendor/gijgo/css/gijgo.min.css" rel="stylesheet">
+
+    <link rel="icon" href="<?= base_url(); ?>assets/img/logo.png" type="image/x-icon">
 
     <style>
         #accordionSidebar,
@@ -45,10 +47,10 @@
             <a class="sidebar-brand d-flex text-white align-items-center bg-white justify-content-center" href="">
 
                 <div class="sidebar-brand-img">
-                    <img class="" style="width: 50px;" src="assets/img/bpbd.png">
+                    <img class="" style="width: 50px;" src="assets/img/logo.png">
                     <!-- <i class="fab fa-angellist"></i> -->
                 </div>
-                <!-- <div class="sidebar-brand-text mx-3">INALUM</div> -->
+                <!-- <div class="sidebar-brand-text mx-3">PORPIIS</div> -->
             </a>
 
             <!-- Nav Item - Dashboard -->
@@ -68,12 +70,12 @@
             </div>
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link pb-0" href="<?= base_url('supplier'); ?>">
                     <i class="fas fa-fw fa-users"></i>
                     <span>Supplier</span>
                 </a>
-            </li>
+            </li> -->
 
             <!-- Nav Item - Pages Collapse Menu -->
             <!-- <li class="nav-item">
@@ -92,9 +94,25 @@
             </li> -->
 
             <!-- Divider -->
-            <!--
-            <hr class="sidebar-divider">
-            -->
+            
+            <!-- <hr class="sidebar-divider"> -->
+            
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item">
+                <a class="nav-link pb-0" href="<?= base_url('event'); ?>">
+                    <i class="fas fa-fw fa-users"></i>
+                    <span>Event</span>
+                </a>
+            </li>
+            
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item">
+                <a class="nav-link pb-0" href="<?= base_url('registrasi'); ?>">
+                    <i class="fas fa-fw fa-users"></i>
+                    <span>Registrasi</span>
+                </a>
+            </li>
+
             <!-- Heading -->
             <!-- <div class="sidebar-heading">
                 Transaksi
@@ -167,7 +185,7 @@
             <div id="content">
 
                 <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-dark bg-primary topbar mb-4 static-top shadow-sm">
+                <nav class="navbar navbar-expand navbar-dark bg-info topbar mb-4 static-top shadow-sm">
 
                     <!-- Sidebar Toggle (Topbar) -->
                     <button id="sidebarToggleTop" class="btn btn-link bg-transparent d-md-none rounded-circle mr-3">
@@ -230,7 +248,7 @@
             <footer class="sticky-footer bg-light">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; CV ADAM JAYA TEKNIK</span>
+                        <span>Copyright &copy; Saya Sendiri</span>
                     </div>
                 </div>
             </footer>
@@ -418,7 +436,7 @@
                 data: {
                     labels: ["Jan", "Feb", "Mar", "Apr", "Mei", "Jun", "Jul", "Agu", "Sep", "Okt", "Nov", "Des"],
                     datasets: [{
-                            label: "Total Barang Masuk",
+                            label: "Total Event",
                             lineTension: 0.3,
                             backgroundColor: "rgba(78, 115, 223, 0.05)",
                             borderColor: "rgba(78, 115, 223, 1)",
@@ -433,7 +451,7 @@
                             data: <?= json_encode($cbm); ?>,
                         },
                         {
-                            label: "Total Barang Keluar",
+                            label: "Total Registrasi",
                             lineTension: 0.3,
                             backgroundColor: "rgba(231, 74, 59, 0.05)",
                             borderColor: "#e74a3b",
@@ -517,9 +535,9 @@
             var myPieChart = new Chart(ctx, {
                 type: 'doughnut',
                 data: {
-                    labels: ["Barang Masuk", "Barang Keluar"],
+                    labels: ["Event", "Registrasi"],
                     datasets: [{
-                        data: [<?= $barang_masuk; ?>, <?= $barang_keluar; ?>],
+                        data: [<?= $event; ?>, <?= $registrasi; ?>],
                         backgroundColor: ['#4e73df', '#e74a3b'],
                         hoverBackgroundColor: ['#5a5c69', '#5a5c69'],
                         hoverBorderColor: "rgba(234, 236, 244, 1)",
