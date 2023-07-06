@@ -114,31 +114,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <a class="nav-link" href="#service">Service</a>
         </li>
         <li class="nav-item @@gallery">
-          <a class="nav-link" href="#gallery">Gallery</a>
+          <a class="nav-link" href="gallery">Gallery</a>
         </li>
-        <li class="nav-item @@team">
-          <a class="nav-link" href="#register">Register</a>
+        <li class="nav-item dropdown @@blogs">
+          <a class="nav-link dropdown-toggle" href="#!" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Register</a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item @@blog" href="pendaftaran">Futsal</a></li>
+            <li><a class="dropdown-item @@blogDetails" href="pendaftaran">Badminton</a></li>
+          </ul>
         </li>
         <li class="nav-item @@appointment">
           <a class="nav-link" href="login"><b>Login</b></a>
         </li>
-        <!-- <li class="nav-item dropdown @@blogs">
-          <a class="nav-link dropdown-toggle" href="#!" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Blogs</a>
-
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item @@blog" href="blog.html">Blog</a></li>
-            <li><a class="dropdown-item @@blogDetails" href="blog-details.html">Blog Details</a></li>
-            <li class="dropdown dropdown-submenu dropright">
-              <a class="dropdown-item dropdown-toggle" href="#!" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sub Menu</a>
-    
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="index.html">Submenu 01</a></li>
-                <li><a class="dropdown-item" href="index.html">Submenu 02</a></li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li class="nav-item @@contact">
+        <!-- <li class="nav-item @@contact">
           <a class="nav-link" href="contact.html">Contact</a>
         </li> -->
       </ul>
@@ -160,7 +148,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <div class="content style text-center">
             <h2 class="text-white text-bold mb-2" data-animation-in="slideInLeft">Pekan Olahraga Permata Insani</h2>
             <p class="tag-text mb-4" data-animation-in="slideInRight">Sport Competition</p>
-            <a href="about.html" class="btn btn-main btn-white" data-animation-in="slideInLeft" data-duration-in="1.2">Register Now</a>
+            <a href="pendaftaran" class="btn btn-main btn-white" data-animation-in="slideInLeft" data-duration-in="1.2">Register Now</a>
           </div>
           <!-- Slide Content End -->
         </div>
@@ -176,7 +164,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <div class="content style text-center">
             <h2 class="text-white" data-animation-in="slideInRight">We Chalenging in Sport Competition</h2>
             <p class="tag-text mb-4" data-animation-in="slideInRight" data-duration-in="0.6">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-            <a href="about.html" class="btn btn-main btn-white" data-animation-in="slideInRight" data-duration-in="1.2">register now</a>
+            <a href="pendaftaran" class="btn btn-main btn-white" data-animation-in="slideInRight" data-duration-in="1.2">register now</a>
           </div>
           <!-- Slide Content End-->
         </div>
@@ -192,7 +180,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <div class="content text-center style">
             <h2 class="text-white text-bold mb-2" data-animation-in="slideInRight">Best Competition In Town</h2>
             <p class="tag-text mb-4" data-animation-in="slideInLeft">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae deserunt, <br>eius pariatur minus itaque nostrum.</p>
-            <a href="about.html" class="btn btn-main btn-white" data-animation-in="slideInRight"  data-duration-in="1.2">register now</a>
+            <a href="pendaftaran" class="btn btn-main btn-white" data-animation-in="slideInRight"  data-duration-in="1.2">register now</a>
           </div>
           <!-- Slide Content End -->
         </div>
@@ -541,13 +529,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <div class="item">
             <div class="inner-box">
               <div class="img_holder">
-                <a href="service.html">
+                <a href="gallery">
                   <img loading="lazy" src="<?= base_url(); ?>assets/img/images/gallery/futsal-1.jpg" alt="images" class="img-fluid">
                 </a>
               </div>
               <div class="image-content text-center">
                 <span>Better Service At Low Cost</span>
-                <a href="service.html">
+                <a href="gallery">
                   <h6>Futsal</h6>
                 </a>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, vero.</p>
@@ -557,13 +545,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <div class="item">
             <div class="inner-box">
               <div class="img_holder">
-                <a href="service.html">
+                <a href="gallery">
                   <img loading="lazy" src="<?= base_url(); ?>assets/img/images/gallery/futsal-2.jpg" alt="images" class="img-fluid">
                 </a>
               </div>
               <div class="image-content text-center">
                 <span>Better Service At Low Cost</span>
-                <a href="service.html">
+                <a href="gallery">
                   <h6>Futsal</h6>
                 </a>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, vero.</p>
@@ -573,13 +561,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <div class="item">
             <div class="inner-box">
               <div class="img_holder">
-                <a href="service.html">
+                <a href="gallery">
                   <img loading="lazy" src="<?= base_url(); ?>assets/img/images/gallery/badminton-1.jpg" alt="images" class="img-fluid">
                 </a>
               </div>
               <div class="image-content text-center">
                 <span>Better Service At Low Cost</span>
-                <a href="service.html">
+                <a href="gallery">
                   <h6>Badminton</h6>
                 </a>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, vero.</p>
@@ -589,13 +577,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <div class="item">
             <div class="inner-box">
               <div class="img_holder">
-                <a href="service.html">
+                <a href="gallery">
                   <img loading="lazy" src="<?= base_url(); ?>assets/img/images/gallery/futsal-3.jpg" alt="images" class="img-fluid">
                 </a>
               </div>
               <div class="image-content text-center">
                 <span>Better Service At Low Cost</span>
-                <a href="service.html">
+                <a href="gallery">
                   <h6>Futsal</h6>
                 </a>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, vero.</p>
@@ -605,13 +593,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <div class="item">
             <div class="inner-box">
               <div class="img_holder">
-                <a href="service.html">
+                <a href="gallery">
                   <img loading="lazy" src="<?= base_url(); ?>assets/img/images/gallery/badmin-2.jpg" alt="images" class="img-fluid">
                 </a>
               </div>
               <div class="image-content text-center">
                 <span>Better Service At Low Cost</span>
-                <a href="service.html">
+                <a href="gallery">
                   <h6>Badminton</h6>
                 </a>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, vero.</p>
@@ -621,13 +609,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <div class="item">
             <div class="inner-box">
               <div class="img_holder">
-                <a href="service.html">
+                <a href="gallery">
                   <img loading="lazy" src="<?= base_url(); ?>assets/img/images/gallery/badmin-3.jpg" alt="images" class="img-fluid">
                 </a>
               </div>
               <div class="image-content text-center">
                 <span>Better Service At Low Cost</span>
-                <a href="service.html">
+                <a href="gallery">
                   <h6>Badminton</h6>
                 </a>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, vero.</p>

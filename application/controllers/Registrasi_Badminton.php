@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Register_Futsal extends CI_Controller
+class Registrasi_Badminton extends CI_Controller
 {
     public function __construct()
     {
@@ -14,8 +14,10 @@ class Register_Futsal extends CI_Controller
 
     public function index()
     {
-        $data['title'] = "Registrasi Futsal";
-        $this->template->load('templates/landing-page', 'landing_page/theme/appointment', $data);
+        $data['title'] = "Registrasi";
+        $data['registrasi'] = $this->admin->getRegistrasi('Badminton');
+        $data['event'] = $this->admin->get('event');
+        $this->template->load('templates/dashboard', 'registrasi/badminton/data', $data);
     }
 
     private function _validasi()
@@ -29,7 +31,7 @@ class Register_Futsal extends CI_Controller
 
     private function _config()
     {
-        $config['upload_path']      = "./assets/file/";
+        $config['upload_path']      = './uploads/';
         $config['allowed_types']    = 'pdf|doc|docx|gif|jpg|jpeg|png';
         $config['encrypt_name']     = TRUE;
         $config['max_size']         = '2048';
@@ -44,9 +46,9 @@ class Register_Futsal extends CI_Controller
 
         if ($this->form_validation->run() == false) {
             $data['title'] = "Registrasi";
-            $data['registrasi'] = $this->admin->getRegistrasi();
+            $data['registrasi'] = $this->admin->getRegistrasi('Badminton');
             $data['event'] = $this->admin->get('event');
-            $this->template->load('templates/dashboard', 'registrasi/add', $data);
+            $this->template->load('templates/dashboard', 'registrasi/badminton/add', $data);
         } else {
             $input = $this->input->post(null, true);
             if (empty($_FILES['file'])) {
@@ -63,21 +65,21 @@ class Register_Futsal extends CI_Controller
                     die;
                 } else {
                     if (userdata('file') != null) {
-                        $old_image = FCPATH . 'assets/file/' . userdata('file');
+                        $old_image = FCPATH . 'uploads/' . userdata('file');
                         if (!unlink($old_image)) {
                             set_pesan('gagal hapus file.');
-                            redirect('registrasi/add');
+                            redirect('registrasi/badminton/add');
                         }
                     }
 
                     $input['file'] = $this->upload->data('file_name');
-                    $update = $this->admin->update('registrasi', 'id_registrasi', $input['id_registrasi'], $input);
+                    $update = $this->admin->insert('registrasi', $input);
                     if ($update) {
-                        set_pesan('perubahan berhasil disimpan.');
+                        set_pesan('data berhasil disimpan.');
                     } else {
-                        set_pesan('gagal menyimpan perubahan');
+                        set_pesan('data gagal disimpan');
                     }
-                    redirect('registrasi/add');
+                    redirect('registrasi/badminton');
                 }
             }
         }
@@ -93,17 +95,17 @@ class Register_Futsal extends CI_Controller
             $data['title'] = "Registrasi";
             $data['registrasi'] = $this->admin->get('registrasi', ['id_registrasi' => $id]);
             $data['event'] = $this->admin->get('event');
-            $this->template->load('templates/dashboard', 'registrasi/edit', $data);
+            $this->template->load('templates/dashboard', 'registrasi/badminton/edit', $data);
         } else {
             $input = $this->input->post(null, true);
             $update = $this->admin->update('registrasi', 'id_registrasi', $id, $input);
 
             if ($update) {
                 set_pesan('data berhasil diedit.');
-                redirect('registrasi');
+                redirect('registrasi/badminton');
             } else {
                 set_pesan('data gagal diedit.');
-                redirect('registrasi/edit/' . $id);
+                redirect('registrasi/badminton/edit/' . $id);
             }
         }
     }
@@ -116,6 +118,6 @@ class Register_Futsal extends CI_Controller
         } else {
             set_pesan('data gagal dihapus.', false);
         }
-        redirect('registrasi');
+        redirect('registrasi/badminton');
     }
 }

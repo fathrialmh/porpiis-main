@@ -16,9 +16,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <meta name="author" content="Themefisher">
   <meta name="generator" content="Themefisher Medical HTML Template v1.0">
   
-  <!-- theme meta -->
-  <meta name="theme-name" content="medic" />
-  
   <!-- ** Plugins Needed for the Project ** -->
   <!-- bootstrap -->
   <link rel="stylesheet" href="<?= base_url(); ?>assets/vendor/plugins/bootstrap/bootstrap.min.css">
@@ -35,9 +32,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <link rel="stylesheet" href="<?= base_url(); ?>assets/vendor/plugins/jquery-ui/jquery-ui.css">
   <!-- timePicker -->
   <link rel="stylesheet" href="<?= base_url(); ?>assets/vendor/plugins/timePicker/timePicker.css">
+
   
   <!-- Stylesheets -->
   <link href="<?= base_url(); ?>assets/css/style.css" rel="stylesheet">
+  <link href="<?= base_url(); ?>assets/css/sb-admin-2.min.css" rel="stylesheet">
+  <link href="<?= base_url(); ?>assets/css/bs-stepper.css" rel="stylesheet">
   
   <!--Favicon-->
   <link rel="icon" href="<?= base_url(); ?>assets/img/images/favicon2.png" type="image/x-icon">
@@ -116,8 +116,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <li class="nav-item @@gallery">
           <a class="nav-link" href="#gallery">Gallery</a>
         </li>
-        <li class="nav-item @@team">
-          <a class="nav-link" href="#register">Register</a>
+        <li class="nav-item dropdown @@blogs">
+          <a class="nav-link dropdown-toggle" href="#!" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Register</a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item @@blog" href="pendaftaran">Futsal</a></li>
+            <li><a class="dropdown-item @@blogDetails" href="pendaftaran">Badminton</a></li>
+          </ul>
         </li>
         <li class="nav-item @@appointment">
           <a class="nav-link" href="login"><b>Login</b></a>
@@ -147,7 +151,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </nav>
 <!--End Main Header -->
 
-<div class="container">
+<div class="container-{breakpoint}">
 
   <?= $contents; ?>
 
@@ -167,8 +171,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </a>
               </figure>
             </div>
-            <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, temporibus?</p> -->
-            <ul class="location-link">
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-5 mb-3 mb-md-0">
+          <h2>CONTACT</h2>
+          <ul class="location-link">
               <li class="item">
                 <i class="fas fa-map-marker-alt"></i>
                 <p>Perum Villa Permata Blok G1 Sindangsari Kab. Tangerang, Indonesia</p>
@@ -190,32 +197,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               <li class="list-inline-item"><a href="https://instagram.com/themefisher" aria-label="instagram"><i class="fab fa-instagram"></i></a></li>
               <li class="list-inline-item"><a href="https://github.com/themefisher" aria-label="github"><i class="fab fa-github"></i></a></li>
             </ul>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-5 mb-3 mb-md-0">
-          <h2>Services</h2>
-          <ul class="menu-link">
-            <li>
-              <a href="service.html">
-                <i class="fa fa-angle-right" aria-hidden="true"></i>Event</a>
-            </li>
-            <li>
-              <a href="service.html">
-                <i class="fa fa-angle-right" aria-hidden="true"></i>Competition</a>
-            </li>
-            <li>
-              <a href="service.html">
-                <i class="fa fa-angle-right" aria-hidden="true"></i>Gaming</a>
-            </li>
-            <li>
-              <a href="service.html">
-                <i class="fa fa-angle-right" aria-hidden="true"></i>Sport</a>
-            </li>
-            <li>
-              <a href="service.html">
-                <i class="fa fa-angle-right" aria-hidden="true"></i>Online</a>
-            </li>
-          </ul>
         </div>
         <div class="col-lg-4 col-md-7">
           <div class="social-links">
@@ -248,6 +229,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </div>
               </li>
             </ul>
+            
           </div>
         </div>
       </div>
@@ -260,7 +242,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       </div>
       <ul class="footer-bottom-link">
         <li>
-          <a href="index.html">Home</a>
+          <a href="welcome">Home</a>
         </li>
         <li>
           <a href="about.html">About</a>
@@ -291,7 +273,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!-- jquery -->
 <script src="<?= base_url(); ?>assets/vendor/plugins/jquery.min.js"></script>
 <!-- bootstrap -->
-<script src="<?= base_url(); ?>assets/vendor/plugins/bootstrap/bootstrap.min.js"></script>
+<script src="<?= base_url(); ?>assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- Slick Slider -->
 <script src="<?= base_url(); ?>assets/vendor/plugins/slick/slick.min.js"></script>
 <script src="<?= base_url(); ?>assets/vendor/plugins/slick/slick-animation.min.js"></script>

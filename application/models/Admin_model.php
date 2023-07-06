@@ -47,11 +47,19 @@ class Admin_model extends CI_Model
         return $this->db->get('event e')->result_array();
     }
 
-    public function getRegistrasi()
+    public function getRegistrasi($event)
     {
         $this->db->join('event e', 'r.event_id = e.id_event');
+        $this->db->like('nama_event', $event);
         $this->db->order_by('id_registrasi');
         return $this->db->get('registrasi r')->result_array();
+    }
+
+    public function getUploads()
+    {
+        $this->db->join('registrasi r', 'u.registrasi_id = r.id_registrasi');
+        $this->db->order_by('registrasi_id');
+        return $this->db->get('uploads u')->result_array();
     }
 
     public function chartEventMulai($bulan)

@@ -9,7 +9,7 @@
                         </h4>
                     </div>
                     <div class="col-auto">
-                        <a href="<?= base_url('registrasi') ?>" class="btn btn-sm btn-secondary btn-icon-split">
+                        <a href="<?= base_url('registrasi_badminton') ?>" class="btn btn-sm btn-secondary btn-icon-split">
                             <span class="icon">
                                 <i class="fa fa-arrow-left"></i>
                             </span>
@@ -22,7 +22,7 @@
             </div>
             <div class="card-body">
                 <?= $this->session->flashdata('pesan'); ?>
-                <?= form_open(); ?>
+                <?php echo form_open_multipart('registrasi_badminton/add'); ?>
                 <div class="row form-group">
                     <label class="col-md-3 text-md-right" for="event_id">Nama Event</label>
                     <div class="col-md-9">

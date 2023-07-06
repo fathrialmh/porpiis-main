@@ -19,7 +19,7 @@ class Dashboard extends CI_Controller
         $data['user'] = $this->admin->count('user');
         $data['transaksi'] = [
             'barang_masuk' => $this->admin->getEvent(),
-            'barang_keluar' => $this->admin->getRegistrasi()
+            'barang_keluar' => $this->admin->getRegistrasi('Futsal')
         ];
 
         // Line Chart
