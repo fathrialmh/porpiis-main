@@ -20,7 +20,7 @@
             <div class="col-lg-12 order-1 order-lg-0">
               <div class="contact-area style-two pl-0 pr-0 pr-lg-4">
                 <div class="section-title">
-                  <h3>Pendaftaran <span>Futsal</span></h3>
+                  <h3>Pendaftaran <span>PORPIIS</span></h3>
                 </div>
                 <?= $this->session->flashdata('pesan'); ?>
                 <form name="register_futsal" action="<?= base_url('pendaftaran/add')?>" method="post" enctype="multipart/form-data">
@@ -35,11 +35,10 @@
                       </div>
                       <?= form_error('sekolah', '<small class="text-danger">', '</small>'); ?>
                       <div class="form-group">
-                        <select class="form-control" name="provinsi" id="provinsi" required>
+                        <!-- <select class="form-control" name="provinsi" id="provinsi" required>
                           <option value="">Provinsi</option>
-                          <option>Provinsi</option>
-                          <!-- Add your options here -->
-                        </select>
+                        </select> -->
+                        <input class="form-control" type="text" name="provinsi" id="provinsi" placeholder="Provinsi" required="">
                       </div>
                     </div>
                     <div class="col-md-6">
@@ -55,11 +54,10 @@
                         </select>
                       </div>
                       <div class="form-group">
-                        <select class="form-control" name="kota" id="kota" required>
+                        <!-- <select class="form-control" name="kota" id="kota" required>
                           <option value="">Kota</option>
-                          <option>Kota</option>
-                          <!-- Add your options here -->
-                        </select>
+                        </select> -->
+                        <input class="form-control" type="text" name="kota" id="kota" placeholder="Kota" required="">
                       </div>
                     </div>
                     <div class="col-md-12">

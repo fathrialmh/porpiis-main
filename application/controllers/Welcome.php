@@ -20,7 +20,7 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('landing_page/theme/index');
+		$this->template->load('templates/landing-page', 'landing_page/theme/index');
 		// $this->template->load('templates/landing-page');
 	}
 }

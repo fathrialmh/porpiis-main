@@ -1,5 +1,5 @@
 <!--Page Title-->
-<section class="page-title text-center" style="background-image:url(images/background/3.jpg);">
+<section class="page-title text-center" style="background-image:url(<?= base_url(); ?>assets/img/images/background/3.jpg);">
     <div class="container">
         <div class="title-text">
             <h1>about us</h1>
@@ -19,115 +19,32 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-6">
-        <img loading="lazy" src="<?= base_url(); ?>assets/img/images/services/service-one.jpg" class="responsive" alt="story">
+        <img loading="lazy" src="<?= base_url(); ?>assets/img/images/favicon2.png" class="responsive" alt="story">
       </div>
       <div class="col-lg-6">
         <div class="story-content">
-          <h2>Our Story</h2>
-          <h5 class="tagline">"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum, minima. Nemo impedit fuga nostrum expedita sint dicta ullam quam et harum velit saepe"</h6>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus totam ducimus est vero, officiis,
-              placeat optio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias aliquam nesciunt fugit optio
-              illum aut. consectetur adipisicing elit. Neque assumenda, est quam perferendis
-              expedita autem?</p>
-            <h6>Mission</h6>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam nihil dolorum beatae consequatur mollitia
-              iure?</p>
-            <h6>Vision</h6>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda consectetur adipisci, voluptatum
-              dolores nostrum omnis.</p>
+          <h2>About PORPIIS</h2>
+          <h5 class="tagline">"Pekan Olahraga Permata Insani"</h6>
+            <p>Tema kegiatan tahun ini adalah POR PIIS 2023: “Tunjukkan Sportivitas,
+              Jadilah Pemenang”. Tema ini diangkat sebagai lambang antusiasme para generasi
+              milenial untuk berkompetisi dalam perlombaan yang diadakan. Kami berharap
+              kegiatan tahun ini dapat menjadi penumpahan jiwa kompetitif dan menjadi
+              penumpahan bakat para perserta lomba</p>
+            <h6>Tujuan</h6>
+            <p>Menjadi wadah penyaluran bakat dan talenta para pelajar dengan
+              menghadirkan lomba-lomba dalam segi non akademik. </p>
+            <h6>Manfaat</h6>
+            <p>Terbangunnya kerja sama dan tali persaudaraan siswa/siswi PERMATA
+              INSANI ISLAMIC SCHOOL dengan sekolah-sekolah lain yang sederajat. </p>
         </div>
       </div>
     </div>
   </div>
-</section>
 
-<!-- Promo Video -->
-<section class="promo-video">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="block text-center">
-          <h6>About Our Hospital</h6>
-          <h1>The World <br>
-            Class Hospitality
-          </h1>
-          <a data-fancybox
-            href="https://www.youtube.com/watch?v=_sI_Ps7JSEk&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0"><i class="fas fa-play"></i></a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="gallery bg-gray">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="section-title text-center">
-          <h3>Collected Shots
-            <span>of Our Hospital</span>
-          </h3>
-          <p>Leverage agile frameworks to provide a robust synopsis for high level overv-
-            <br>iews. Iterative approaches to corporate strategy...</p>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6">
-        <div class="gallery-item">
-          <img loading="lazy" src="images/gallery/gallery-01.jpg" class="img-fluid" alt="gallery-image">
-          <a data-fancybox="images" href="images/gallery/gallery-01.jpg"></a>
-          <h3>Facility 01</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, in.</p>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6">
-        <div class="gallery-item">
-          <img loading="lazy" src="images/gallery/gallery-02.jpg" class="img-fluid" alt="gallery-image">
-          <a data-fancybox="images" href="images/gallery/gallery-02.jpg"></a>
-          <h3>Facility 02</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, in.</p>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6">
-        <div class="gallery-item">
-          <img loading="lazy" src="images/gallery/gallery-03.jpg" class="img-fluid" alt="gallery-image">
-          <a data-fancybox="images" href="images/gallery/gallery-03.jpg"></a>
-          <h3>Facility 03</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, in.</p>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6">
-        <div class="gallery-item">
-          <img loading="lazy" src="images/gallery/gallery-04.jpg" class="img-fluid" alt="gallery-image">
-          <a data-fancybox="images" href="images/gallery/gallery-04.jpg"></a>
-          <h3>Facility 04</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, in.</p>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6">
-        <div class="gallery-item">
-          <img loading="lazy" src="images/gallery/gallery-05.jpg" class="img-fluid" alt="gallery-image">
-          <a data-fancybox="images" href="images/gallery/gallery-05.jpg"></a>
-          <h3>Facility 05</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, in.</p>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6">
-        <div class="gallery-item">
-          <img loading="lazy" src="images/gallery/gallery-06.jpg" class="img-fluid" alt="gallery-image">
-          <a data-fancybox="images" href="images/gallery/gallery-06.jpg"></a>
-          <h3>Facility 06</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, in.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Contact Section -->
+  <!-- Contact Section -->
 <section class="appoinment-section section">
   <div class="container">
     <div class="row">
-      <div class="col-lg-6">
         <div class="accordion-section">
   <div class="section-title">
     <h3>FAQ</h3>
@@ -138,7 +55,7 @@
         <div class="card-header" role="tab" id="headingOne">
           <h4 class="card-title">
             <a role="button" data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-              Why Should I choose Medical Health
+              Bagaimana Cara Mendaftar Event PORPIIS?
             </a>
           </h4>
         </div>
@@ -161,7 +78,7 @@
           <h4 class="card-title">
             <a class="collapsed" role="button" data-toggle="collapse" href="#collapseTwo"
               aria-expanded="false" aria-controls="collapseTwo">
-              What are the Centre’s visiting hours?
+              Dimana Event PORPIIS Dilaksanakan?
             </a>
           </h4>
         </div>
@@ -184,7 +101,7 @@
           <h4 class="card-title">
             <a class="collapsed" role="button" data-toggle="collapse" href="#collapseThree"
               aria-expanded="false" aria-controls="collapseThree">
-              How many visitors are allowed?
+              Siapa Saja Yang Dapat Mengikuti Event PORPIIS?
             </a>
           </h4>
         </div>
@@ -203,62 +120,14 @@
         </div>
       </div>
     </div>
-  </div>
 </div>
       </div>
-      <div class="col-lg-6">
-        <div class="contact-area pl-0 pl-lg-5">
-  <div class="section-title">
-    <h3>Request
-      <span>Appointment</span>
-    </h3>
-  </div>
-  <form name="contact_form" class="default-form contact-form" action="!#" method="post">
-    <div class="row">
-      <div class="col-md-6">
-        <div class="form-group">
-          <input class="form-control" type="text" name="Name" placeholder="Name" required="">
-        </div>
-        <div class="form-group">
-          <input class="form-control" type="email" name="Email" placeholder="Email" required="">
-        </div>
-        <div class="form-group">
-          <select class="form-control" name="subject">
-            <option>Departments</option>
-            <option>Diagnostic</option>
-            <option>Psychological</option>
-          </select>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="form-group">
-          <input class="form-control" type="text" name="Phone" placeholder="Phone" required="">
-        </div>
-        <div class="form-group">
-          <input class="form-control" type="text" name="Date" placeholder="Date" required="" id="datepicker" autocomplete="off">
-          <i class="fa fa-calendar" aria-hidden="true"></i>
-        </div>
-        <div class="form-group">
-          <select class="form-control" name="subject">
-            <option>Doctor</option>
-            <option>Diagnostic</option>
-            <option>Psychological</option>
-          </select>
-        </div>
-      </div>
-      <div class="col-md-12">
-        <div class="form-group">
-          <textarea class="form-control" name="form_message" placeholder="Your Message" required=""></textarea>
-        </div>
-        <div class="form-group text-center">
-          <button type="submit" class="btn-style-one">submit now</button>
-        </div>
-      </div>
-    </div>
-  </form>
-</div>
-      </div>
+</section>
+<!-- End Contact Section -->
+
+  <div class="row">
+    <div class="col-md mt-2 d-flex justify-content-center">
+      <a href="https://d1fdloi71mui9q.cloudfront.net/a5joPG5lRM6VsMDANVgR_Proposal%20Peserta%20POR%20PIIS-2.pdf"><button class="btn-style-one">Download Proposal PORPIIS</button></a>
     </div>
   </div>
 </section>
-<!-- End Contact Section -->

@@ -1,6 +1,12 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
+<?php
+// Set the $currentPage variable based on the current page or URL
+$title = basename($_SERVER['PHP_SELF'], '.php'); // Assuming your pages have .php extensions
+
+// Render the template/navbar with the $currentPage variable
+?>
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
@@ -56,7 +62,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class="row align-items-center">
       <div class="col-md-6">
         <div class="top-left text-center text-md-left">
-          <h6>Pekan Olahraga Permata Insani - 2023</h6>
+          <h6><a href="welcome"><img class="" style="width: 40px;" src="assets/img/images/favicon2.png"></a>&nbspPekan Olahraga Permata Insani - 2023</h6>
         </div>
       </div>
       <div class="col-md-6">
@@ -104,19 +110,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   
     <div class="collapse navbar-collapse justify-content-center" id="navbarLinks">
       <ul class="navbar-nav">
-        <li class="nav-item active">
+        <li class="nav-item <?php if ($title === 'welcome') echo 'active'; ?>">
           <a class="nav-link" href="welcome">Home</a>
         </li>
-        <li class="nav-item @@about">
-          <a class="nav-link" href="#about">About</a>
+        <li class="nav-item <?php if ($title === 'about') echo 'active'; ?>">
+          <a class="nav-link" href="about">About</a>
         </li>
-        <li class="nav-item @@service">
-          <a class="nav-link" href="#service">Service</a>
+        <li class="nav-item <?php if ($title === 'event') echo 'active'; ?>">
+          <a class="nav-link" href="service">event</a>
         </li>
-        <li class="nav-item @@gallery">
-          <a class="nav-link" href="#gallery">Gallery</a>
+        <li class="nav-item <?php if ($title === 'gallery') echo 'active'; ?>">
+          <a class="nav-link" href="gallery">Gallery</a>
         </li>
-        <li class="nav-item dropdown @@blogs">
+        <li class="nav-item dropdown <?php if ($title === 'pendaftaran') echo 'active'; ?>">
           <a class="nav-link dropdown-toggle" href="#!" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Register</a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item @@blog" href="pendaftaran">Futsal</a></li>

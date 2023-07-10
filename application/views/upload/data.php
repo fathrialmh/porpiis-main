@@ -46,7 +46,6 @@
                                 </a>
                             </td>
                             <th>
-                                <a href="<?= base_url('registrasi_badminton/edit/') . $u['id_registrasi'] ?>" class="btn btn-circle btn-warning btn-sm"><i class="fa fa-edit"></i></a>
                                 <a onclick="return confirm('Yakin ingin hapus?')" href="<?= base_url('registrasi_badminton/delete/') . $u['id_registrasi'] ?>" class="btn btn-circle btn-danger btn-sm"><i class="fa fa-trash"></i></a>
                             </th>
                         </tr>
