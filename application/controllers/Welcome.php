@@ -18,9 +18,19 @@ class Welcome extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
+	public function __construct()
+    {
+        parent::__construct();
+
+        $this->load->model('Admin_model', 'admin');
+        $this->load->library('form_validation');
+    }
+	
 	public function index()
 	{
-		$this->template->load('templates/landing-page', 'landing_page/theme/index');
+		$data['registrasi'] = $this->admin->getRegistrasi('Futsal');
+        $data['event'] = $this->admin->get('event');
+		$this->template->load('templates/landing-page', 'landing_page/theme/index',$data);
 		// $this->template->load('templates/landing-page');
 	}
 }

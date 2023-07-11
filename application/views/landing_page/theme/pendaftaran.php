@@ -5,7 +5,7 @@
                   <h1>Register</h1>
                   <ul class="title-menu clearfix">
                       <li>
-                          <a href="index.html">home &nbsp;/</a>
+                          <a href="welcome">home &nbsp;/</a>
                       </li>
                       <li>Register</li>
                   </ul>
@@ -78,7 +78,6 @@
                 <div class="section-title">
                   <h3>Upload <span>Persyaratan</span></h3><br>
                 </div>
-                <?= $this->session->flashdata('pesan'); ?>
                 <form name="register_futsal" action="<?= base_url('pendaftaran/add')?>" method="post" enctype="multipart/form-data">
                 <div class="form-container">
                   <div class="row" id="form-sections-container">

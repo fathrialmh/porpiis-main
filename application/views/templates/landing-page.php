@@ -122,6 +122,12 @@ $title = basename($_SERVER['PHP_SELF'], '.php'); // Assuming your pages have .ph
         <li class="nav-item <?php if ($title === 'gallery') echo 'active'; ?>">
           <a class="nav-link" href="gallery">Gallery</a>
         </li>
+        <li class="nav-item <?php if ($title === 'team') echo 'active'; ?>">
+          <a class="nav-link" href="team">Team</a>
+        </li>
+        <li class="nav-item <?php if ($title === 'faq') echo 'active'; ?>">
+          <a class="nav-link" href="faq">FAQ</a>
+        </li>
         <li class="nav-item dropdown <?php if ($title === 'pendaftaran') echo 'active'; ?>">
           <a class="nav-link dropdown-toggle" href="#!" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Register</a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">

@@ -13,7 +13,7 @@ class Gallery extends CI_Controller
 
     public function index()
     {
-        $data['title'] = "Registrasi";
+        $data['title'] = "Gallery";
         $this->template->load('templates/landing-page', 'landing_page/theme/gallery', $data);
     }
 }
