@@ -27,9 +27,6 @@
                             <button type="submit" class="btn btn-info btn-user btn-block">
                                 Login
                             </button>
-                            <div class="text-center mt-4">
-                                <a class="small" href="<?= base_url('register') ?>">Buat Akun!</a>
-                            </div>
                             <?= form_close(); ?>
                         </div>
                     </div>
