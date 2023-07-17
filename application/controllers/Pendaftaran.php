@@ -166,4 +166,12 @@ class Pendaftaran extends CI_Controller
         }
         redirect('registrasi');
     }
+
+    public function futsal()
+    {
+        $data['title'] = "Registrasi Futsal";
+        $data['registrasi'] = $this->admin->getRegistrasi('futsal');
+        $data['event'] = $this->admin->get('event');
+        $this->template->load('templates/landing-page', 'landing_page/theme/pendaftaran', $data);
+    }
 }

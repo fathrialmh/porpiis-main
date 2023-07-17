@@ -25,6 +25,16 @@
                 <?= $this->session->flashdata('pesan'); ?>
                 <form name="register_futsal" action="<?= base_url('pendaftaran/add')?>" method="post" enctype="multipart/form-data">
                   <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <select name="event_id" id="event_id" class="custom-select" required>
+                          <option value="" selected disabled>Pilih Event</option>
+                          <?php foreach ($event as $e) : ?>
+                            <option <?= set_select('event_id', $e['id_event']) ?> value="<?= $e['id_event'] ?>"><?= $e['nama_event'] ?></option>
+                          <?php endforeach; ?>
+                        </select>
+                      </div>
+                    </div>
                     <div class="col-md-6">
                       <div class="form-group">
                         <input class="form-control" type="text" name="nama_team" id="nama_team" placeholder="Nama Team" required="">
@@ -46,12 +56,12 @@
                       <input class="form-control" type="text" name="peserta" id="peserta" placeholder="Jumlah Anggota" required="numeric" oninput="addFormSections()">
                       </div>
                       <div class="form-group">
-                        <select name="event_id" id="event_id" class="custom-select" required>
-                          <option value="" selected disabled>Pilih Event</option>
-                          <?php foreach ($event as $e) : ?>
-                            <option <?= set_select('event_id', $e['id_event']) ?> value="<?= $e['id_event'] ?>"><?= $e['nama_event'] ?></option>
-                          <?php endforeach; ?>
-                        </select>
+                          <select name="tingkat" id="tingkat" class="custom-select">
+                                <option value="" selected disabled>Pilih Tingkat</option>
+                                <option value="SD" id="SD" name="tingkat">SD</option>
+                                <option value="SMP" id="SMP" name="tingkat">SMP</option>
+                                <option value="SMA" id="SMA" name="tingkat">SMA</option>
+                          </select>
                       </div>
                       <div class="form-group">
                         <!-- <select class="form-control" name="kota" id="kota" required>
@@ -218,8 +228,6 @@
           </div>
         </div>
       </section>
-
-      
 
 <script>
   function previewFile(event, previewId) {
