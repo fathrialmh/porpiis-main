@@ -15,6 +15,7 @@
                 <tr>
                     <th>No.</th>
                     <th>Nama Team</th>
+                    <th>Nama Peserta</th>
                     <th>Foto</th>
                     <th>Raport</th>
                     <th>Kartu Pelajar</th>
@@ -30,6 +31,7 @@
                         <tr>
                             <td><?= $no++; ?></td>
                             <td><?= $u['nama_team']; ?></td>
+                            <td><?= $u['nama_peserta']; ?></td>
                             <td>
                                 <a href="<?= base_url('/'). $u['foto'] ?>">
                                     <img src="<?= base_url('/'). $u['foto'] ?>" alt="Foto" class="img-thumbnail" width="100">
@@ -46,7 +48,7 @@
                                 </a>
                             </td>
                             <th>
-                                <a onclick="return confirm('Yakin ingin hapus?')" href="<?= base_url('registrasi_badminton/delete/') . $u['id_registrasi'] ?>" class="btn btn-circle btn-danger btn-sm"><i class="fa fa-trash"></i></a>
+                                <a onclick="return confirm('Yakin ingin hapus?')" href="<?= base_url('upload/delete/') . $u['id_uploads'] ?>" class="btn btn-circle btn-danger btn-sm"><i class="fa fa-trash"></i></a>
                             </th>
                         </tr>
                     <?php endforeach; ?>

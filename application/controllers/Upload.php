@@ -102,7 +102,7 @@ class Upload extends CI_Controller
 
             if ($update) {
                 set_pesan('data berhasil diedit.');
-                redirect('registrasi');
+                redirect('upload');
             } else {
                 set_pesan('data gagal diedit.');
                 redirect('registrasi/futsal/edit/' . $id);
@@ -113,11 +113,11 @@ class Upload extends CI_Controller
     public function delete($getId)
     {
         $id = encode_php_tags($getId);
-        if ($this->admin->delete('registrasi', 'id_registrasi', $id)) {
+        if ($this->admin->delete('uploads', 'id_uploads', $id)) {
             set_pesan('data berhasil dihapus.');
         } else {
             set_pesan('data gagal dihapus.', false);
         }
-        redirect('registrasi');
+        redirect('upload');
     }
 }
