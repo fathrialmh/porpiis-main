@@ -44,6 +44,12 @@ $title = basename($_SERVER['PHP_SELF'], '.php'); // Assuming your pages have .ph
   <link href="<?= base_url(); ?>assets/css/style.css" rel="stylesheet">
   <link href="<?= base_url(); ?>assets/css/sb-admin-2.min.css" rel="stylesheet">
   <link href="<?= base_url(); ?>assets/css/bs-stepper.css" rel="stylesheet">
+
+  <!-- DataTables -->
+  <link href="<?= base_url(); ?>assets/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+  <link href="<?= base_url(); ?>assets/vendor/datatables/buttons/css/buttons.bootstrap4.min.css" rel="stylesheet">
+  <link href="<?= base_url(); ?>assets/vendor/datatables/responsive/css/responsive.bootstrap4.min.css" rel="stylesheet">
+  <link href="<?= base_url(); ?>assets/vendor/gijgo/css/gijgo.min.css" rel="stylesheet">
   
   <!--Favicon-->
   <link rel="icon" href="<?= base_url(); ?>assets/img/images/favicon2.png" type="image/x-icon">
@@ -58,11 +64,14 @@ $title = basename($_SERVER['PHP_SELF'], '.php'); // Assuming your pages have .ph
 
 <!--header top-->
 <div class="header-top">
-  <div class="container">
+  <div class="container-fluid">
     <div class="row align-items-center">
       <div class="col-md-6">
-        <div class="top-left text-center text-md-left">
-          <h6><a href="welcome"><img class="" style="width: 40px;" src="assets/img/images/favicon2.png"></a>&nbspPekan Olahraga Permata Insani - 2023</h6>
+        <div class="top-left">
+          <a href="welcome" class="d-flex align-items-center">
+            <img class="mr-2" style="width: 40px;" src="assets/img/images/favicon2.png" alt="Logo">
+            <h6>Pekan Olahraga Permata Insani - 2023</h6>
+          </a>
         </div>
       </div>
       <div class="col-md-6">
@@ -74,23 +83,8 @@ $title = basename($_SERVER['PHP_SELF'], '.php'); // Assuming your pages have .ph
               </a>
             </li>
             <li>
-              <a href="https://themefisher.com/" aria-label="twitter">
-                <i class="fab fa-twitter"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://themefisher.com/" aria-label="google-plus">
-                <i class="fab fa-google-plus-g"></i>
-              </a>
-            </li>
-            <li>
               <a href="https://themefisher.com/" aria-label="instagram">
                 <i class="fab fa-instagram"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://themefisher.com/" aria-label="pinterest">
-                <i class="fab fa-pinterest-p"></i>
               </a>
             </li>
           </ul>
@@ -107,7 +101,6 @@ $title = basename($_SERVER['PHP_SELF'], '.php'); // Assuming your pages have .ph
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarLinks" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-  
     <div class="collapse navbar-collapse justify-content-center" id="navbarLinks">
       <ul class="navbar-nav">
         <li class="nav-item <?php if ($title === 'welcome') echo 'active'; ?>">
@@ -203,43 +196,14 @@ $title = basename($_SERVER['PHP_SELF'], '.php'); // Assuming your pages have .ph
                 <p>(021) 59353505</p>
               </li>
             </ul>
-            <ul class="list-inline social-icons">
-              <li class="list-inline-item"><a href="https://facebook.com/themefisher" aria-label="facebook"><i class="fab fa-facebook-f"></i></a></li>
-              <li class="list-inline-item"><a href="https://twitter.com/themefisher" aria-label="twitter"><i class="fab fa-twitter"></i></a></li>
-              <li class="list-inline-item"><a href="https://instagram.com/themefisher" aria-label="instagram"><i class="fab fa-instagram"></i></a></li>
-              <li class="list-inline-item"><a href="https://github.com/themefisher" aria-label="github"><i class="fab fa-github"></i></a></li>
-            </ul>
+            
         </div>
         <div class="col-lg-4 col-md-7">
-          <div class="social-links">
-            <h2>Event List</h2>
-            <ul>
-              <li class="item">
-                <div class="media">
-                  <div class="media-left mr-3">
-                    <a href="blog-details.html">
-                      <img loading="lazy" src="<?= base_url(); ?>assets/img/images/blog/post-thumb-small.jpg" alt="post-thumb">
-                    </a>
-                  </div>
-                  <div class="media-body">
-                    <h5><a href="blog-details.html">Futsal</a></h5>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, dolorem.</p>
-                  </div>
-                </div>
-              </li>
-              <li class="item">
-                <div class="media">
-                  <div class="media-left mr-3">
-                    <a href="blog-details.html">
-                      <img loading="lazy" src="<?= base_url(); ?>assets/img/images/blog/post-thumb-small.jpg" alt="post-thumb">
-                    </a>
-                  </div>
-                  <div class="media-body">
-                    <h5><a href="blog-details.html">Badminton</a></h5>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, dolorem.</p>
-                  </div>
-                </div>
-              </li>
+          <div class="location-link">
+            <h2>Social Media</h2>
+            <ul class="list-inline social-icons">
+              <li class="list-inline-item"><a href="https://facebook.com/themefisher" aria-label="facebook"><i class="fab fa-facebook-f"></i></a></li>
+              <li class="list-inline-item"><a href="https://instagram.com/themefisher" aria-label="instagram"><i class="fab fa-instagram"></i></a></li>
             </ul>
             
           </div>
@@ -252,17 +216,6 @@ $title = basename($_SERVER['PHP_SELF'], '.php'); // Assuming your pages have .ph
       <div class="copyright-text">
         <p>&copy; Copyright 2023. Designed &amp; Developed by Me</p>
       </div>
-      <ul class="footer-bottom-link">
-        <li>
-          <a href="welcome">Home</a>
-        </li>
-        <li>
-          <a href="about.html">About</a>
-        </li>
-        <li>
-          <a href="contact.html">Contact</a>
-        </li>
-      </ul>
     </div>
   </div>
 </footer>
@@ -299,6 +252,20 @@ $title = basename($_SERVER['PHP_SELF'], '.php'); // Assuming your pages have .ph
 <script src="<?= base_url(); ?>assets/vendor/plugins/jquery-ui/jquery-ui.js" defer></script>
 <!-- timePicker -->
 <script src="<?= base_url(); ?>assets/vendor/plugins/timePicker/timePicker.js" defer></script>
+
+<!-- Page level plugins -->
+<script src="<?= base_url(); ?>assets/vendor/datatables/jquery.dataTables.min.js"></script>
+<script src="<?= base_url(); ?>assets/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+<script src="<?= base_url(); ?>assets/vendor/datatables/buttons/js/dataTables.buttons.min.js"></script>
+<script src="<?= base_url(); ?>assets/vendor/datatables/buttons/js/buttons.bootstrap4.min.js"></script>
+<script src="<?= base_url(); ?>assets/vendor/datatables/jszip/jszip.min.js"></script>
+<script src="<?= base_url(); ?>assets/vendor/datatables/pdfmake/pdfmake.min.js"></script>
+<script src="<?= base_url(); ?>assets/vendor/datatables/pdfmake/vfs_fonts.js"></script>
+<script src="<?= base_url(); ?>assets/vendor/datatables/buttons/js/buttons.html5.min.js"></script>
+<script src="<?= base_url(); ?>assets/vendor/datatables/buttons/js/buttons.print.min.js"></script>
+<script src="<?= base_url(); ?>assets/vendor/datatables/buttons/js/buttons.colVis.min.js"></script>
+<script src="<?= base_url(); ?>assets/vendor/datatables/responsive/js/dataTables.responsive.min.js"></script>
+<script src="<?= base_url(); ?>assets/vendor/datatables/responsive/js/responsive.bootstrap4.min.js"></script>
 
 <!-- script js -->
 <script src="<?= base_url(); ?>assets/js/script.js"></script>

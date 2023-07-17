@@ -1,3 +1,7 @@
+<!-- Include DataTables CSS and JS -->
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
+
+
 <!--Page Title-->
 <section class="page-title text-center" style="background-image:url(<?= base_url(); ?>assets/img/images/background/3.jpg);">
     <div class="container">
@@ -63,6 +67,7 @@
                                     <th>Nama Team</th>
                                     <th>Jumlah Peserta</th>
                                     <th>Asal Sekolah</th>
+                                    <th>Tingkat</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -77,6 +82,7 @@
                                             <td><?= $r['nama_team']; ?></td>
                                             <td><?= $r['peserta']; ?></td>
                                             <td><?= $r['sekolah']; ?></td>
+                                            <td><?= $r['tingkat']; ?></td>
                                         </tr>
                                     <?php endforeach; ?>
                                 <?php else : ?>
@@ -114,7 +120,7 @@
                       </div>
                   </div>
                   <div class="table-responsive">
-                      <table class="table table-striped w-100 dt-responsive nowrap" id="dataTable">
+                    <table class="table table-striped w-100 dt-responsive nowrap" id="dataTable">
                           <thead>
                               <tr>
                                   <th>No.</th>
@@ -122,6 +128,7 @@
                                   <th>Nama Team</th>
                                   <th>Jumlah Peserta</th>
                                   <th>Asal Sekolah</th>
+                                  <th>Tingkat</th>
                               </tr>
                           </thead>
                           <tbody>
@@ -136,6 +143,7 @@
                                           <td><?= $r['nama_team']; ?></td>
                                           <td><?= $r['peserta']; ?></td>
                                           <td><?= $r['sekolah']; ?></td>
+                                          <td><?= $r['tingkat']; ?></td>
                                       </tr>
                                   <?php endforeach; ?>
                               <?php else : ?>
@@ -158,3 +166,36 @@
     </div>
   </div>
 </section>
+
+
+<script>
+  $(document).ready(function() {
+    // Initialize DataTables with options for search and filtering
+    $('#dataTable').DataTable({
+      // Enable search functionality
+      searching: true,
+
+      // Enable filtering by event type (Futsal or Badminton)
+      columnDefs: [
+        { targets: 1, searchable: true }, // Column index 1 (Event column)
+      ],
+
+      // Add custom dropdown filters for event type
+      initComplete: function() {
+        this.api().columns(1).every(function() {
+          var column = this;
+          var select = $('<select><option value="">All Events</option></select>')
+            .appendTo($(column.footer()).empty())
+            .on('change', function() {
+              var val = $.fn.dataTable.util.escapeRegex($(this).val());
+              column.search(val ? '^' + val + '$' : '', true, false).draw();
+            });
+
+          column.data().unique().sort().each(function(d, j) {
+            select.append('<option value="' + d + '">' + d + '</option>');
+          });
+        });
+      }
+    });
+  });
+</script>

@@ -11,7 +11,7 @@
           <div class="content style text-center">
             <h2 class="text-white text-bold mb-2" data-animation-in="slideInLeft">Pekan Olahraga Permata Insani</h2>
             <p class="tag-text mb-4" data-animation-in="slideInRight">Sport Competition</p>
-            <a href="pendaftaran" class="btn btn-main btn-white" data-animation-in="slideInLeft" data-duration-in="1.2">Register Now</a>
+            <!-- <a href="pendaftaran" class="btn btn-main btn-white" data-animation-in="slideInLeft" data-duration-in="1.2">Register Now</a> -->
           </div>
           <!-- Slide Content End -->
         </div>
@@ -27,7 +27,7 @@
           <div class="content style text-center">
             <h2 class="text-white" data-animation-in="slideInRight">We Chalenging in Sport Competition</h2>
             <p class="tag-text mb-4" data-animation-in="slideInRight" data-duration-in="0.6">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-            <a href="pendaftaran" class="btn btn-main btn-white" data-animation-in="slideInRight" data-duration-in="1.2">register now</a>
+            <!-- <a href="pendaftaran" class="btn btn-main btn-white" data-animation-in="slideInRight" data-duration-in="1.2">register now</a> -->
           </div>
           <!-- Slide Content End-->
         </div>
@@ -43,7 +43,7 @@
           <div class="content text-center style">
             <h2 class="text-white text-bold mb-2" data-animation-in="slideInRight">Best Competition In Town</h2>
             <p class="tag-text mb-4" data-animation-in="slideInLeft">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae deserunt, <br>eius pariatur minus itaque nostrum.</p>
-            <a href="pendaftaran" class="btn btn-main btn-white" data-animation-in="slideInRight"  data-duration-in="1.2">register now</a>
+            <!-- <a href="pendaftaran" class="btn btn-main btn-white" data-animation-in="slideInRight"  data-duration-in="1.2">register now</a> -->
           </div>
           <!-- Slide Content End -->
         </div>
@@ -55,7 +55,7 @@
 <!--====  End of Page Slider  ====-->
 
 <section class="cta">
-  <div class="container">
+  <div class="container-fluid">
     <div class="cta-block row no-gutters">
       <div class="col-lg-4 col-md-6 emmergency item">
         <i class="fa fa-phone"></i>

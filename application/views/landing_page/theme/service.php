@@ -30,6 +30,7 @@
             <li><i class="fas fa-caret-right"></i>Mematuhi syarat & ketentuan yang berlaku</li>
             <li><i class="fas fa-caret-right"></i>Melakukan pembayaran biaya pendaftaran</li>
             <h6><br>Biaya Pendaftaran: Rp. 300.000</h6>
+            <h6><br>Transfer: BCA 897654312 a/n Permata Insani</h6>
           </ul>
           <a href="pendaftaran" class="btn-style-one" style="border-radius:10px;">Register Now</a>
         </div>
@@ -65,6 +66,7 @@
             <li>
               <i class="far fa-check-circle"></i>Mematuhi syarat & ketentuan yang berlaku</li>
               <h6><br>Biaya Pendaftaran: Rp. 300.000</h6>
+              <h6><br>Transfer: BCA 897654312 a/n Permata Insani</h6>
           </ul>
           <a href="pendaftaran" class="btn-style-one" style="border-radius:10px;">Register Now</a>
         </div>
@@ -74,7 +76,7 @@
 </section>
 
 <section class="cta">
-  <div class="container">
+  <div class="container-fluid">
     <div class="cta-block row no-gutters">
       <div class="col-lg-4 col-md-6 emmergency item">
         <i class="fa fa-phone"></i>
@@ -101,119 +103,3 @@
     </div>
   </div>
 </section>
-
-<!--Service Section-->
-<section class="service-section bg-gray section" id="gallery">
-  <div class="container">
-    <div class="section-title text-center">
-      <h3>Documentation
-        <span>Event</span>
-      </h3>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet. qui suscipit atque <br>
-        fugiat officia corporis rerum eaque neque totam animi, sapiente culpa. Architecto!</p>
-    </div>
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="items-container">
-          <div class="item">
-            <div class="inner-box">
-              <div class="img_holder">
-                <a href="gallery">
-                  <img loading="lazy" src="<?= base_url(); ?>assets/img/images/gallery/futsal-1.jpg" alt="images" class="img-fluid">
-                </a>
-              </div>
-              <div class="image-content text-center">
-                <span>Better Service At Low Cost</span>
-                <a href="gallery">
-                  <h6>Futsal</h6>
-                </a>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, vero.</p>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="inner-box">
-              <div class="img_holder">
-                <a href="gallery">
-                  <img loading="lazy" src="<?= base_url(); ?>assets/img/images/gallery/futsal-2.jpg" alt="images" class="img-fluid">
-                </a>
-              </div>
-              <div class="image-content text-center">
-                <span>Better Service At Low Cost</span>
-                <a href="gallery">
-                  <h6>Futsal</h6>
-                </a>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, vero.</p>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="inner-box">
-              <div class="img_holder">
-                <a href="gallery">
-                  <img loading="lazy" src="<?= base_url(); ?>assets/img/images/gallery/badminton-1.jpg" alt="images" class="img-fluid">
-                </a>
-              </div>
-              <div class="image-content text-center">
-                <span>Better Service At Low Cost</span>
-                <a href="gallery">
-                  <h6>Badminton</h6>
-                </a>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, vero.</p>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="inner-box">
-              <div class="img_holder">
-                <a href="gallery">
-                  <img loading="lazy" src="<?= base_url(); ?>assets/img/images/gallery/futsal-3.jpg" alt="images" class="img-fluid">
-                </a>
-              </div>
-              <div class="image-content text-center">
-                <span>Better Service At Low Cost</span>
-                <a href="gallery">
-                  <h6>Futsal</h6>
-                </a>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, vero.</p>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="inner-box">
-              <div class="img_holder">
-                <a href="gallery">
-                  <img loading="lazy" src="<?= base_url(); ?>assets/img/images/gallery/badmin-2.jpg" alt="images" class="img-fluid">
-                </a>
-              </div>
-              <div class="image-content text-center">
-                <span>Better Service At Low Cost</span>
-                <a href="gallery">
-                  <h6>Badminton</h6>
-                </a>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, vero.</p>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="inner-box">
-              <div class="img_holder">
-                <a href="gallery">
-                  <img loading="lazy" src="<?= base_url(); ?>assets/img/images/gallery/badmin-3.jpg" alt="images" class="img-fluid">
-                </a>
-              </div>
-              <div class="image-content text-center">
-                <span>Better Service At Low Cost</span>
-                <a href="gallery">
-                  <h6>Badminton</h6>
-                </a>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, vero.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!--End Service Section-->
