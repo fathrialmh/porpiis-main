@@ -68,7 +68,7 @@ class Registrasi_Badminton extends CI_Controller
                         $old_image = FCPATH . 'uploads/' . userdata('file');
                         if (!unlink($old_image)) {
                             set_pesan('gagal hapus file.');
-                            redirect('registrasi/badminton/add');
+                            redirect('registrasi_badminton/add');
                         }
                     }
 
@@ -79,7 +79,7 @@ class Registrasi_Badminton extends CI_Controller
                     } else {
                         set_pesan('data gagal disimpan');
                     }
-                    redirect('registrasi/badminton');
+                    redirect('registrasi_badminton');
                 }
             }
         }
@@ -102,10 +102,10 @@ class Registrasi_Badminton extends CI_Controller
 
             if ($update) {
                 set_pesan('data berhasil diedit.');
-                redirect('registrasi/badminton');
+                redirect('registrasi_badminton');
             } else {
                 set_pesan('data gagal diedit.');
-                redirect('registrasi/badminton/edit/' . $id);
+                redirect('registrasi_badminton/edit/' . $id);
             }
         }
     }
@@ -118,6 +118,6 @@ class Registrasi_Badminton extends CI_Controller
         } else {
             set_pesan('data gagal dihapus.', false);
         }
-        redirect('registrasi/badminton');
+        redirect('registrasi_badminton');
     }
 }

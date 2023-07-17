@@ -68,7 +68,7 @@ class Registrasi_Futsal extends CI_Controller
                         $old_image = FCPATH . 'uploads/' . userdata('file');
                         if (!unlink($old_image)) {
                             set_pesan('gagal hapus file.');
-                            redirect('registrasi/futsal/add');
+                            redirect('registrasi_futsal/add');
                         }
                     }
 
@@ -79,7 +79,7 @@ class Registrasi_Futsal extends CI_Controller
                     } else {
                         set_pesan('data gagal disimpan');
                     }
-                    redirect('registrasi');
+                    redirect('registrasi_futsal');
                 }
             }
         }
@@ -102,10 +102,10 @@ class Registrasi_Futsal extends CI_Controller
 
             if ($update) {
                 set_pesan('data berhasil diedit.');
-                redirect('registrasi');
+                redirect('registrasi_futsal');
             } else {
                 set_pesan('data gagal diedit.');
-                redirect('registrasi/futsal/edit/' . $id);
+                redirect('registrasi_futsal/edit/' . $id);
             }
         }
     }
@@ -118,6 +118,6 @@ class Registrasi_Futsal extends CI_Controller
         } else {
             set_pesan('data gagal dihapus.', false);
         }
-        redirect('registrasi');
+        redirect('registrasi_futsal');
     }
 }

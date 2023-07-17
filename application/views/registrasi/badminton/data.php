@@ -28,6 +28,7 @@
                     <th>Nama Team</th>
                     <th>Jumlah Peserta</th>
                     <th>Asal Sekolah</th>
+                    <th>Tingkat</th>
                     <th>Bukti Bayar</th>
                     <th>Aksi</th>
                 </tr>
@@ -44,6 +45,7 @@
                             <td><?= $r['nama_team']; ?></td>
                             <td><?= $r['peserta']; ?></td>
                             <td><?= $r['sekolah']; ?></td>
+                            <td><?= $r['tingkat']; ?></td>
                             <td><a href="<?= base_url('uploads/'). $r['file'] ?>"><?= $r['file']; ?></a></td>
                             <th>
                                 <a href="<?= base_url('registrasi_badminton/edit/') . $r['id_registrasi'] ?>" class="btn btn-circle btn-warning btn-sm"><i class="fa fa-edit"></i></a>

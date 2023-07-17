@@ -27,10 +27,15 @@
                     <label class="col-md-3 text-md-right" for="event_id">Nama Event</label>
                     <div class="col-md-9">
                         <div class="input-group">
-                            <select name="event_id" id="event_id" class="custom-select">
-                                <option value="" selected disabled>Pilih Event</option>
+                            <select name="event_id" id="disabledSelect" class="custom-select">
                                 <?php foreach ($event as $e) : ?>
-                                    <option <?= set_select('event_id', $e['id_event']) ?> value="<?= $e['id_event'] ?>"><?= $e['nama_event'] ?></option>
+                                    <?php
+                                    // Check if the event name is "Futsal" and get its id
+                                    $selected = $e['nama_event'] == 'Badminton' ? $e['id_event'] : '';
+                                    ?>
+                                    <?php if ($e['nama_event'] == 'Badminton') : ?>
+                                        <option <?= set_select('event_id', $e['id_event'], $selected === $e['id_event']) ?> value="<?= $e['id_event'] ?>"><?= $e['nama_event'] ?></option>
+                                    <?php endif; ?>
                                 <?php endforeach; ?>
                             </select>
                         </div>
@@ -71,6 +76,23 @@
                             <input value="<?= set_value('sekolah'); ?>" name="sekolah" id="sekolah" type="text" class="form-control" placeholder="Asal Sekolah...">
                         </div>
                         <?= form_error('sekolah', '<small class="text-danger">', '</small>'); ?>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <label class="col-md-3 text-md-right" for="tingkat">Tingkat</label>
+                    <div class="col-md-9">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1"><i class="fa fa-fw fa-home"></i></span>
+                            </div>
+                            <select name="tingkat" id="tingkat" class="custom-select">
+                                <option value="" selected disabled>Pilih Tingkat</option>
+                                <option value="SD" id="SD" name="tingkat">SD</option>
+                                <option value="SMP" id="SMP" name="tingkat">SMP</option>
+                                <option value="SMA" id="SMA" name="tingkat">SMA</option>
+                            </select>
+                        </div>
+                        <?= form_error('tingkat', '<small class="text-danger">', '</small>'); ?>
                     </div>
                 </div>
                 <div class="row form-group">

@@ -74,6 +74,23 @@
                     </div>
                 </div>
                 <div class="row form-group">
+                    <label class="col-md-3 text-md-right" for="tingkat">Tingkat</label>
+                    <div class="col-md-9">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1"><i class="fa fa-fw fa-home"></i></span>
+                            </div>
+                            <select name="tingkat" id="tingkat" class="custom-select">
+                                <option value="" selected disabled>Pilih Tingkat</option>
+                                <option value="SD" id="SD" name="tingkat">SD</option>
+                                <option value="SMP" id="SMP" name="tingkat">SMP</option>
+                                <option value="SMA" id="SMA" name="tingkat">SMA</option>
+                            </select>
+                        </div>
+                        <?= form_error('tingkat', '<small class="text-danger">', '</small>'); ?>
+                    </div>
+                </div>
+                <div class="row form-group">
                     <label class="col-md-3 text-md-right" for="provinsi">Provinsi</label>
                     <div class="col-md-9">
                         <div class="input-group">
