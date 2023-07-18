@@ -272,11 +272,13 @@
                         <input class="form-control" id="raport${i}" name="raport${i}" type="file" required="">
                     </label>
                 </div>
+                <?= form_error('raport', '<small class="text-danger">', '</small>'); ?>
                 <div class="form-group">
                     <label for="kartu_pelajar" class="form-label text-center">Upload Scan Kartu Pelajar
                         <input class="form-control" id="kartu_pelajar${i}" name="kartu_pelajar${i}" type="file" required="">
                     </label>
                 </div>
+                <?= form_error('kartu_pelajar', '<small class="text-danger">', '</small>'); ?>
             </div>
         `;
         formSectionsContainer.innerHTML += formSectionHtml;

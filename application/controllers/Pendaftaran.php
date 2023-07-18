@@ -26,6 +26,7 @@ class Pendaftaran extends CI_Controller
         $this->form_validation->set_rules('sekolah', 'Asal Sekolah', 'required|trim');
         $this->form_validation->set_rules('provinsi', 'Provinsi', 'required|trim');
         $this->form_validation->set_rules('kota', 'Kota', 'required|trim');
+        $this->form_validation->set_rules('file', 'File', 'callback_validate_file');
     }
 
     private function _config()
@@ -129,6 +130,17 @@ class Pendaftaran extends CI_Controller
             // Handle the exception here
             echo 'Caught exception: ',  $e->getMessage(), "\n";
         }
+    }
+
+    // Validation callback function for the file upload
+    public function validate_file()
+    {
+        $this->load->library('upload', $config);
+        if (!$this->upload->do_upload('file')) {
+            $this->form_validation->set_message('validate_file', $this->upload->display_errors());
+            return false;
+        }
+        return true;
     }
 
 
