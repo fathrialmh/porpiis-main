@@ -40,11 +40,11 @@
                 </a>
               </div>
               <div class="image-content text-center">
-                <span>Better Service At Low Cost</span>
+                <span>FUTSAL CHAMPION</span>
                 <a href="gallery">
-                  <h6>Futsal</h6>
+                  <h6>JUARA 1 FUTSAL</h6>
                 </a>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, vero.</p>
+                <p>Selamat kepada team Garuda telah meraih kemenangan juara 1 Futsal pada kegiatan PORPIIS</p>
               </div>
             </div>
           </div>
@@ -56,11 +56,11 @@
                 </a>
               </div>
               <div class="image-content text-center">
-                <span>Better Service At Low Cost</span>
+                <span>FUTSAL CHAMPION</span>
                 <a href="gallery">
-                  <h6>Futsal</h6>
+                  <h6>JUARA 2 FUTSAL</h6>
                 </a>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, vero.</p>
+                <p>Selamat kepada team Elang telah meraih kemenangan juara 2 Futsal pada kegiatan PORPIIS</p>
               </div>
             </div>
           </div>
@@ -72,11 +72,11 @@
                 </a>
               </div>
               <div class="image-content text-center">
-                <span>Better Service At Low Cost</span>
+                <span>BADMINTON CHAMPION</span>
                 <a href="gallery">
-                  <h6>Badminton</h6>
+                  <h6>JUARA 1 BADMINTON</h6>
                 </a>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, vero.</p>
+                <p>Selamat kepada team Anggrek telah meraih kemenangan juara 1 Badminton pada kegiatan PORPIIS</p>
               </div>
             </div>
           </div>
@@ -88,11 +88,11 @@
                 </a>
               </div>
               <div class="image-content text-center">
-                <span>Better Service At Low Cost</span>
+                <span>FUTSAL CHAMPION</span>
                 <a href="gallery">
-                  <h6>Futsal</h6>
+                  <h6>JUARA 3 FUTSAL</h6>
                 </a>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, vero.</p>
+                <p>Selamat kepada team Merpati telah meraih kemenangan juara 3 Futsal pada kegiatan PORPIIS</p>
               </div>
             </div>
           </div>
@@ -104,11 +104,11 @@
                 </a>
               </div>
               <div class="image-content text-center">
-                <span>Better Service At Low Cost</span>
+                <span>BADMINTON CHAMPION</span>
                 <a href="gallery">
-                  <h6>Badminton</h6>
+                  <h6>JUARA 2 BADMINTON</h6>
                 </a>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, vero.</p>
+                <p>Selamat kepada team Melati telah meraih kemenangan juara 2 Badminton pada kegiatan PORPIIS</p>
               </div>
             </div>
           </div>
@@ -120,11 +120,11 @@
                 </a>
               </div>
               <div class="image-content text-center">
-                <span>Better Service At Low Cost</span>
+                <span>BADMINTON CHAMPION</span>
                 <a href="gallery">
-                  <h6>Badminton</h6>
+                  <h6>JUARA 3 BADMINTON</h6>
                 </a>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, vero.</p>
+                <p>Selamat kepada team Mawar telah meraih kemenangan juara 3 Badminton pada kegiatan PORPIIS</p>
               </div>
             </div>
           </div>
@@ -138,7 +138,7 @@
         <div class="gallery-item">
           <img loading="lazy" src="<?= base_url(); ?>assets/img/images/gallery/futsal-1.jpg" class="img-fluid" alt="gallery-image">
           <a data-fancybox="images" href="images/gallery/futsal-1.jpg"></a>
-          <h3>Facility 01</h3>
+          <h3>Futsal 01</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, in.</p>
         </div>
       </div>
@@ -146,7 +146,7 @@
         <div class="gallery-item">
           <img loading="lazy" src="<?= base_url(); ?>assets/img/images/gallery/futsal-2.jpg" class="img-fluid" alt="gallery-image">
           <a data-fancybox="images" href="<?= base_url(); ?>assets/img/images/gallery/futsal-2.jpg"></a>
-          <h3>Facility 02</h3>
+          <h3>Futsal 02</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, in.</p>
         </div>
       </div>
@@ -154,7 +154,7 @@
         <div class="gallery-item">
           <img loading="lazy" src="<?= base_url(); ?>assets/img/images/gallery/futsal-3.jpg" class="img-fluid" alt="gallery-image">
           <a data-fancybox="images" href="<?= base_url(); ?>assets/img/images/gallery/futsal-3.jpg"></a>
-          <h3>Facility 03</h3>
+          <h3>Futsal 03</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, in.</p>
         </div>
       </div>
@@ -162,7 +162,7 @@
         <div class="gallery-item">
           <img loading="lazy" src="<?= base_url(); ?>assets/img/images/gallery/badmin-2.jpg" class="img-fluid" alt="gallery-image">
           <a data-fancybox="images" href="<?= base_url(); ?>assets/img/images/gallery/badmin-2.jpg"></a>
-          <h3>Facility 04</h3>
+          <h3>Badminton 01</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, in.</p>
         </div>
       </div>
@@ -170,7 +170,7 @@
         <div class="gallery-item">
           <img loading="lazy" src="<?= base_url(); ?>assets/img/images/gallery/badmin-3.jpg" class="img-fluid" alt="gallery-image">
           <a data-fancybox="images" href="<?= base_url(); ?>assets/img/images/gallery/badmin-3.jpg"></a>
-          <h3>Facility 05</h3>
+          <h3>Badminton 02</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, in.</p>
         </div>
       </div>
@@ -178,7 +178,7 @@
         <div class="gallery-item">
           <img loading="lazy" src="<?= base_url(); ?>assets/img/images/gallery/badminton-1.jpg" class="img-fluid" alt="gallery-image">
           <a data-fancybox="images" href="<?= base_url(); ?>assets/img/images/gallery/badminton-1.jpg"></a>
-          <h3>Facility 06</h3>
+          <h3>Badminton 03</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, in.</p>
         </div>
       </div>

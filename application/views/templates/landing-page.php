@@ -78,13 +78,18 @@ $title = basename($_SERVER['PHP_SELF'], '.php'); // Assuming your pages have .ph
         <div class="top-right text-center text-md-right">
           <ul class="social-links">
             <li>
-              <a href="https://themefisher.com/" aria-label="facebook">
+              <a href="https://www.facebook.com/profile.php?id=100057508867773" aria-label="facebook">
                 <i class="fab fa-facebook-f"></i>
               </a>
             </li>
             <li>
-              <a href="https://themefisher.com/" aria-label="instagram">
+              <a href="https://www.instagram.com/piis_tangerang/" aria-label="instagram">
                 <i class="fab fa-instagram"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/channel/UCseiTUdtrXcm1pFVmRMw2FA" aria-label="instagram">
+                <i class="fab fa-youtube"></i>
               </a>
             </li>
           </ul>
@@ -202,8 +207,9 @@ $title = basename($_SERVER['PHP_SELF'], '.php'); // Assuming your pages have .ph
           <div class="location-link">
             <h2>Social Media</h2>
             <ul class="list-inline social-icons">
-              <li class="list-inline-item"><a href="https://facebook.com/themefisher" aria-label="facebook"><i class="fab fa-facebook-f"></i></a></li>
-              <li class="list-inline-item"><a href="https://instagram.com/themefisher" aria-label="instagram"><i class="fab fa-instagram"></i></a></li>
+              <li class="list-inline-item"><a href="https://www.facebook.com/profile.php?id=100057508867773" aria-label="facebook"><i class="fab fa-facebook-f"></i></a></li>
+              <li class="list-inline-item"><a href="https://www.instagram.com/piis_tangerang/" aria-label="instagram"><i class="fab fa-instagram"></i></a></li>
+              <li class="list-inline-item"><a href="https://www.youtube.com/channel/UCseiTUdtrXcm1pFVmRMw2FA" aria-label="youtube"><i class="fab fa-youtube"></i></a></li>
             </ul>
             
           </div>
