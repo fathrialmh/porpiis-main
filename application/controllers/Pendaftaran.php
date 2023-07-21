@@ -56,6 +56,7 @@ class Pendaftaran extends CI_Controller
                 $name = $this->input->post('nama_team');
                 $participant = $this->input->post('peserta');
                 $school = $this->input->post('sekolah');
+                $tingkat = $this->input->post('tingkat');
                 $provinsi = $this->input->post('provinsi');
                 $kota = $this->input->post('kota');
                 $event = $this->input->post('event_id');
@@ -68,6 +69,7 @@ class Pendaftaran extends CI_Controller
                         'nama_team' => $name,
                         'peserta' => $participant,
                         'sekolah' => $school,
+                        'tingkat' => $tingkat,
                         'provinsi' => $provinsi,
                         'kota' => $kota,
                         'file' => $file_name,
@@ -135,6 +137,9 @@ class Pendaftaran extends CI_Controller
     // Validation callback function for the file upload
     public function validate_file()
     {
+        $this->_validasi();
+        $this->_config();
+
         $this->load->library('upload', $config);
         if (!$this->upload->do_upload('file')) {
             $this->form_validation->set_message('validate_file', $this->upload->display_errors());
